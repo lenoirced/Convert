@@ -83,7 +83,7 @@ export function Converter() {
         </div>
       </header>
 
-      <div className="px-2 pb-6 pt-5 text-center">
+      <div className="flex flex-1 flex-col items-center justify-center px-2 text-center">
         <div className="break-all text-[44px] leading-[1.1] font-semibold">
           {rawInput === "0" ? "0" : formatDisplay(rawInput)}
           <span className="ml-1 text-xl font-medium text-muted-foreground">
@@ -117,7 +117,7 @@ export function Converter() {
         </div>
       </div>
 
-      <div className="flex gap-2 px-1 pb-5">
+      <div className="flex gap-2 px-1 pb-3">
         {QUICK_AMOUNTS.map((amount) => (
           <button
             key={amount}
@@ -130,7 +130,7 @@ export function Converter() {
         ))}
       </div>
 
-      <div className="mt-auto grid grid-cols-3 gap-0.5">
+      <div className="grid grid-cols-3 gap-0.5">
         {KEYS.map((k) => (
           <button
             key={k}
