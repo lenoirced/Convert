@@ -32,7 +32,7 @@ export async function resolveExchangeRate(): Promise<{
 }> {
   try {
     const res = await fetch(
-      "https://api.frankfurter.app/latest?from=KRW&to=EUR",
+      "https://api.frankfurter.dev/v1/latest?from=KRW&to=EUR",
     )
     if (!res.ok) throw new Error("bad response")
     const data = await res.json()
