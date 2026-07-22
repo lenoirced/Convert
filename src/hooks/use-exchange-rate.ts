@@ -19,6 +19,7 @@ export function useExchangeRate(isOnline: boolean) {
   const [sourceLabel, setSourceLabel] = useState(
     "taux hors ligne (secours)",
   )
+  const [isLive, setIsLive] = useState(false)
 
   useEffect(() => {
     let cancelled = false
@@ -26,6 +27,7 @@ export function useExchangeRate(isOnline: boolean) {
       if (cancelled) return
       setRate(rate)
       setSourceLabel(labelForSource(source))
+      setIsLive(source.kind === "live")
     })
     return () => {
       cancelled = true
@@ -33,5 +35,5 @@ export function useExchangeRate(isOnline: boolean) {
     // Re-attempt whenever connectivity is restored, to refresh a stale/cached rate.
   }, [isOnline])
 
-  return { rate, sourceLabel }
+  return { rate, sourceLabel, isLive }
 }
