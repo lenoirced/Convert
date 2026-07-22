@@ -107,7 +107,7 @@ export function Converter() {
         <div
           className={cn(
             "break-all text-[44px] leading-[1.1] font-semibold",
-            isLive ? "text-primary/70" : "text-destructive/70",
+            isLive ? "text-primary/50" : "text-destructive/50",
           )}
         >
           {direction === "KRW"
