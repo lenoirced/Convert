@@ -107,13 +107,18 @@ export function Converter() {
         <div
           className={cn(
             "break-all text-[44px] leading-[1.1] font-semibold",
-            isLive ? "text-primary/50" : "text-destructive/50",
+            isLive ? "text-primary" : "text-destructive",
           )}
         >
           {direction === "KRW"
             ? formatEUR(resultValue)
             : formatKRW(resultValue)}
-          <span className="ml-1 text-xl font-medium text-muted-foreground">
+          <span
+            className={cn(
+              "ml-1 text-xl font-medium",
+              isLive ? "text-primary/50" : "text-destructive/50",
+            )}
+          >
             {resultCurrency}
           </span>
         </div>
