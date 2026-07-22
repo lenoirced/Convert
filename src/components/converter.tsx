@@ -104,7 +104,12 @@ export function Converter() {
           </button>
         </div>
 
-        <div className="break-all text-[44px] leading-[1.1] font-semibold text-primary/70">
+        <div
+          className={cn(
+            "break-all text-[44px] leading-[1.1] font-semibold",
+            isLive ? "text-primary/70" : "text-destructive/70",
+          )}
+        >
           {direction === "KRW"
             ? formatEUR(resultValue)
             : formatKRW(resultValue)}
