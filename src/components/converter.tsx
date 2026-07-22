@@ -91,6 +91,15 @@ export function Converter() {
           </span>
         </div>
 
+        <div className="break-all text-[44px] leading-[1.1] font-semibold text-primary">
+          {direction === "KRW"
+            ? formatEUR(resultValue)
+            : formatKRW(resultValue)}
+          <span className="ml-1 text-xl font-medium text-muted-foreground">
+            {resultCurrency}
+          </span>
+        </div>
+
         <div className="my-3.5 flex items-center justify-center">
           <button
             type="button"
@@ -100,15 +109,6 @@ export function Converter() {
           >
             <ArrowUpDown className="h-[18px] w-[18px]" />
           </button>
-        </div>
-
-        <div className="text-[26px] font-semibold text-primary">
-          {direction === "KRW"
-            ? formatEUR(resultValue)
-            : formatKRW(resultValue)}
-          <span className="ml-1 text-[15px] font-medium text-muted-foreground">
-            {resultCurrency}
-          </span>
         </div>
       </div>
 
