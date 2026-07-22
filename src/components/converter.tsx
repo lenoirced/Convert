@@ -110,6 +110,11 @@ export function Converter() {
             {resultCurrency}
           </span>
         </div>
+
+        <div className="mt-3.5 text-center text-xs text-muted-foreground">
+          1 EUR = <b className="font-semibold text-foreground">{formatKRW(1 / rate)}</b> KRW
+          &middot; {sourceLabel}
+        </div>
       </div>
 
       <div className="flex gap-2 px-1 pb-5">
@@ -143,11 +148,6 @@ export function Converter() {
             {k === "back" ? <Delete className="h-[22px] w-[22px]" /> : k}
           </button>
         ))}
-      </div>
-
-      <div className="mt-3.5 text-center text-xs text-muted-foreground">
-        1 EUR = <b className="font-semibold text-foreground">{formatKRW(1 / rate)}</b> KRW
-        &middot; {sourceLabel}
       </div>
     </div>
   )
