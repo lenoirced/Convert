@@ -3,5 +3,4 @@
   <rect width="512" height="512" fill="#0a0e17"/>
   <text x="256" y="336" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif"
         font-size="300" font-weight="700" fill="#3b6ef5" text-anchor="middle">₩</text>
-  <line x1="112" y1="400" x2="400" y2="112" stroke="#f4f5f7" stroke-width="30" stroke-linecap="round"/>
 </svg>
