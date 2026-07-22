@@ -7,7 +7,7 @@ import { useRef, useState } from "react"
 
 type Direction = "KRW" | "EUR"
 
-const QUICK_AMOUNTS = [10_000, 50_000, 100_000]
+const QUICK_AMOUNTS = [10_000, 100_000, 500_000]
 
 const KEYS = ["1", "2", "3", "4", "5", "6", "7", "8", "9", ".", "0", "back"]
 
