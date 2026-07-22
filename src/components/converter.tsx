@@ -1,4 +1,4 @@
-import { ArrowUpDown, Delete } from "lucide-react"
+import { ArrowUpDown, Delete, TrendingUp } from "lucide-react"
 import { useOnlineStatus } from "@/hooks/use-online-status"
 import { useExchangeRate } from "@/hooks/use-exchange-rate"
 import { formatDisplay, formatEUR, formatKRW } from "@/lib/format"
@@ -76,10 +76,11 @@ export function Converter() {
 
       <div
         className={cn(
-          "mt-2 text-center text-xs",
+          "mt-1 flex items-center justify-center gap-1 text-center text-xs",
           isLive ? "text-primary" : "text-destructive",
         )}
       >
+        <TrendingUp className="h-3.5 w-3.5" />
         1 EUR = <b className="font-semibold">{formatKRW(1 / rate)}</b> KRW
         &middot; {sourceLabel}
       </div>
