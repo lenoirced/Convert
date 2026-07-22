@@ -70,9 +70,9 @@ export function Converter() {
 
   return (
     <div className="mx-auto flex min-h-dvh w-full max-w-md flex-col px-5 pb-6 pt-[calc(env(safe-area-inset-top)+20px)]">
-      <header className="mb-5 flex items-center justify-between">
+      <header className="relative flex items-center justify-center">
         <h1 className="text-[17px] font-semibold">Convertisseur</h1>
-        <div className="flex items-center gap-1.5 rounded-full border border-border bg-card px-2.5 py-1.5 text-xs text-muted-foreground">
+        <div className="absolute right-0 flex items-center gap-1.5 rounded-full border border-border bg-card px-2.5 py-1.5 text-xs text-muted-foreground">
           <span
             className={cn(
               "h-1.5 w-1.5 rounded-full",
@@ -82,6 +82,11 @@ export function Converter() {
           {isOnline ? "En ligne" : "Hors ligne"}
         </div>
       </header>
+
+      <div className="mt-2 text-center text-xs text-muted-foreground">
+        1 EUR = <b className="font-semibold text-foreground">{formatKRW(1 / rate)}</b> KRW
+        &middot; {sourceLabel}
+      </div>
 
       <div className="flex flex-1 flex-col items-center justify-center px-2 text-center">
         <div className="break-all text-[44px] leading-[1.1] font-semibold">
@@ -109,11 +114,6 @@ export function Converter() {
           <span className="ml-1 text-xl font-medium text-muted-foreground">
             {resultCurrency}
           </span>
-        </div>
-
-        <div className="mt-3.5 text-center text-xs text-muted-foreground">
-          1 EUR = <b className="font-semibold text-foreground">{formatKRW(1 / rate)}</b> KRW
-          &middot; {sourceLabel}
         </div>
       </div>
 
