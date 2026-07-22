@@ -120,7 +120,7 @@ export function Converter() {
             onClick={() => quickAmount(amount)}
             className="flex-1 rounded-xl border border-border bg-card py-2.5 text-[13px] font-medium active:bg-card-2"
           >
-            {amount.toLocaleString("fr-FR")}
+            {formatKRW(amount)}
           </button>
         ))}
       </div>
@@ -146,8 +146,8 @@ export function Converter() {
       </div>
 
       <div className="mt-3.5 text-center text-xs text-muted-foreground">
-        1 000 KRW = <b className="font-semibold text-foreground">{(rate * 1000).toFixed(2)}</b>{" "}
-        EUR &middot; {sourceLabel}
+        1 EUR = <b className="font-semibold text-foreground">{formatKRW(1 / rate)}</b> KRW
+        &middot; {sourceLabel}
       </div>
     </div>
   )
